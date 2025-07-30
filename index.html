@@ -3,9 +3,17 @@
 <head>
 <style>
 /* Ukuran label saat dicetak: 104mm x 50.8mm */
+
+:root {
+    --page-width: 104mm;
+    --page-height: 52mm;
+    --page-margin: 0.2mm;
+    /* --page-extra: 1mm; */
+}
+
 @page {
-  size: 104mm 50.8mm;
-  margin: 0.2mm;
+    size: var(--page-width) var(--page-height);
+    margin: var(--page-margin);
 }
 
 body {
@@ -37,6 +45,7 @@ table {
 td, th {
   padding: 1px;
   vertical-align: top;
+  font-size: 11pt !important;
 }
 </style>
 </head>
